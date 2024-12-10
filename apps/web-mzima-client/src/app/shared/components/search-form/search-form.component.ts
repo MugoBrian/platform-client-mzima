@@ -354,9 +354,7 @@ export class SearchFormComponent extends BaseComponent implements OnInit {
           }
         },
         error: (err) => {
-          if (err.message.match(/Http failure response for/)) {
-            setTimeout(() => this.getCategories(), 2000);
-          }
+          console.log('getCategories:', err);
         },
       });
   }
